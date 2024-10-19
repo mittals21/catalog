@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import fullscreen from "../assets/fullscreen.svg"
 import compare from "../assets/compare.svg"
+import Chart from "./Chart"
 
 const ChartComponent = () => {
   const [timeframe, setTimeframe] = useState("1d")
@@ -15,7 +16,8 @@ const ChartComponent = () => {
   ]
 
   return (
-    <div className="pl-14 pr-48 pt-7  text-lg  flex items-center gap-32">
+    <div className="flex flex-col justify-center">
+      <div className="pl-14 pr-48 pt-7  text-lg  flex items-center gap-32">
       <div className="flex items-center gap-8 text-gray-700">
         <div className="flex items-center gap-2 ">
           <img src={fullscreen} alt="" />
@@ -41,6 +43,8 @@ const ChartComponent = () => {
           </button>
         ))}
       </div>
+    </div>
+    <Chart/>
     </div>
   )
 }
