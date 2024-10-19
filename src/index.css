@@ -8,3 +8,7 @@
 body{
   font-family: "Poppins";
 }
+
+#tv-attr-logo {
+  display: none !important;
+}
